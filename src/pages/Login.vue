@@ -63,7 +63,7 @@ export default {
         .then(() => this.$router.push({ name: 'Dashboard' }))
         .catch((e) => {
           this.authError = _.get(e, 'response.data.message', 'Error del servidor')
-          this.setErrorsFromServer(e, 'loginForm')
+          // this.setErrorsFromServer(e, 'loginForm')
         })
         .finally(() => {
           this.submitting = false
